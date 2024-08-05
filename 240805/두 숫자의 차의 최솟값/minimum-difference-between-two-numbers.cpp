@@ -3,16 +3,15 @@ using namespace std;
 
 int main() {
 
-    int n, arr[10]{ 0, }, minDif = INT32_MAX;
+    int n, prev = 0, minDif = INT32_MAX;
     cin >> n;
 
     for (int i = 0; i < n; ++i)
     {
-        cin >> arr[i];
-        for (int j = 0; j < i; ++j)
-        {
-            minDif = min(abs(arr[j] - arr[i]), minDif);
-        }
+        int num;
+        cin >> num;
+        if (prev != 0) minDif = min(minDif, num - prev);
+        prev = num;
     }
 
     cout << minDif;
