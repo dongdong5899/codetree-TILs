@@ -13,7 +13,7 @@ int main() {
         int strSum = 0;
         for (int j = 0; j < str[i].length(); ++j)
         {
-            if (str[i][j] < 56 && str[i][j] >= 48)
+            if (str[i][j] < 58 && str[i][j] >= 48)
             {
                 strSum *= 10;
                 strSum += str[i][j] - 48;
